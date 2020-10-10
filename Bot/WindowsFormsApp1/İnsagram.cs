@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
         private void İnsagram_Load(object sender, EventArgs e)
         {
             proxycek2();
-            lines = System.IO.File.ReadAllLines(@"C:\Users\faruk\Desktop\isimler");
+           // lines = System.IO.File.ReadAllLines(@"C:\\Users\\faruk\\Desktop\\isimler.txt");
         }
        
         public async void StartDriverP(string proxy)
@@ -165,7 +165,7 @@ namespace WindowsFormsApp1
                         drv.Quit();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                 }
             });
@@ -176,7 +176,7 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-                    for (int i = 0; i < lines.Length; i++)
+                    for (int i = 0; i < 9; i++)
                     {
                         StartDriverP(ANNEM.Items[sayac + 1].ToString());
                         drv.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(59);
@@ -217,7 +217,7 @@ namespace WindowsFormsApp1
                         */drv.Quit(); 
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                 }
             });

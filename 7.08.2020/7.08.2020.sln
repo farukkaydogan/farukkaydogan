@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.08.2020", "7.08.2020.csproj", "{6BCF99FA-D943-450C-81F2-80CA4A8BE551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base_Virtual", "..\Base_Virtual\Base_Virtual.csproj", "{BBF9D32D-D929-4476-9802-898F1E304042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock", "..\Clock\Clock.csproj", "{9A145575-D24C-4C59-98C0-8CB1F63500E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BCF99FA-D943-450C-81F2-80CA4A8BE551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCF99FA-D943-450C-81F2-80CA4A8BE551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCF99FA-D943-450C-81F2-80CA4A8BE551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCF99FA-D943-450C-81F2-80CA4A8BE551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF9D32D-D929-4476-9802-898F1E304042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF9D32D-D929-4476-9802-898F1E304042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF9D32D-D929-4476-9802-898F1E304042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF9D32D-D929-4476-9802-898F1E304042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A145575-D24C-4C59-98C0-8CB1F63500E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A145575-D24C-4C59-98C0-8CB1F63500E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A145575-D24C-4C59-98C0-8CB1F63500E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A145575-D24C-4C59-98C0-8CB1F63500E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DDE6344-A81C-4600-A4A8-9DAA87CF6BDC}
+	EndGlobalSection
+EndGlobal

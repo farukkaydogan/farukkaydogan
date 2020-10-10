@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RentCarDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_Araclar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EklenmeTarihi" Type="date" />
+          <Property Name="Marka" Type="nvarchar" MaxLength="50" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="Yil" Type="nvarchar" MaxLength="50" />
+          <Property Name="Yakit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Vites" Type="nvarchar" MaxLength="50" />
+          <Property Name="SonKM" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotorGucu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cekis" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kapi" Type="nvarchar" MaxLength="50" />
+          <Property Name="KasaTipi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Renk" Type="nvarchar" MaxLength="50" />
+          <Property Name="HasarDurumu" Type="nvarchar" MaxLength="50" />
+          <Property Name="KiraDurumu" Type="bit" />
+          <Property Name="Plaka" Type="nvarchar" MaxLength="50" />
+          <Property Name="Resim" Type="image" />
+        </EntityType>
+        <EntityType Name="TBL_Musteriler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TcNo" Type="nvarchar" MaxLength="11" />
+          <Property Name="Isim" Type="nvarchar" MaxLength="50" />
+          <Property Name="Soyisim" Type="nvarchar" MaxLength="50" />
+          <Property Name="DogumTarihi" Type="date" />
+          <Property Name="DogumYeri" Type="nvarchar" MaxLength="50" />
+          <Property Name="CepTel" Type="nvarchar" MaxLength="52" />
+          <Property Name="EvTel" Type="nvarchar" MaxLength="52" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adres" Type="nvarchar(max)" />
+          <Property Name="EhliyetNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="EhliyetTuru" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notlar" Type="nvarchar(max)" />
+          <Property Name="Resim" Type="image" />
+        </EntityType>
+        <EntityContainer Name="RentCarDBModelStoreContainer">
+          <EntitySet Name="TBL_Araclar" EntityType="Self.TBL_Araclar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_Musteriler" EntityType="Self.TBL_Musteriler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RentCarDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBL_Musteriler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TcNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="Isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Soyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+          <Property Name="DogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CepTel" Type="String" MaxLength="52" FixedLength="false" Unicode="true" />
+          <Property Name="EvTel" Type="String" MaxLength="52" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EhliyetNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EhliyetTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notlar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Resim" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="RentCarDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBL_Musteriler" EntityType="Self.TBL_Musteriler" />
+          <EntitySet Name="TBL_Araclar" EntityType="RentCarDBModel.TBL_Araclar" />
+        </EntityContainer>
+        <EntityType Name="TBL_Araclar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EklenmeTarihi" Type="DateTime" Precision="0" />
+          <Property Name="Marka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Yil" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Yakit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Vites" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SonKM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MotorGucu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cekis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kapi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KasaTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Renk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HasarDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KiraDurumu" Type="Boolean" />
+          <Property Name="Plaka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Resim" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RentCarDBModelStoreContainer" CdmEntityContainer="RentCarDBEntities">
+          <EntitySetMapping Name="TBL_Musteriler">
+            <EntityTypeMapping TypeName="RentCarDBModel.TBL_Musteriler">
+              <MappingFragment StoreEntitySet="TBL_Musteriler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+                <ScalarProperty Name="Isim" ColumnName="Isim" />
+                <ScalarProperty Name="Soyisim" ColumnName="Soyisim" />
+                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+                <ScalarProperty Name="DogumYeri" ColumnName="DogumYeri" />
+                <ScalarProperty Name="CepTel" ColumnName="CepTel" />
+                <ScalarProperty Name="EvTel" ColumnName="EvTel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="EhliyetNo" ColumnName="EhliyetNo" />
+                <ScalarProperty Name="EhliyetTuru" ColumnName="EhliyetTuru" />
+                <ScalarProperty Name="Notlar" ColumnName="Notlar" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_Araclar">
+            <EntityTypeMapping TypeName="RentCarDBModel.TBL_Araclar">
+              <MappingFragment StoreEntitySet="TBL_Araclar">
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Plaka" ColumnName="Plaka" />
+                <ScalarProperty Name="KiraDurumu" ColumnName="KiraDurumu" />
+                <ScalarProperty Name="HasarDurumu" ColumnName="HasarDurumu" />
+                <ScalarProperty Name="Renk" ColumnName="Renk" />
+                <ScalarProperty Name="KasaTipi" ColumnName="KasaTipi" />
+                <ScalarProperty Name="Kapi" ColumnName="Kapi" />
+                <ScalarProperty Name="Cekis" ColumnName="Cekis" />
+                <ScalarProperty Name="MotorGucu" ColumnName="MotorGucu" />
+                <ScalarProperty Name="SonKM" ColumnName="SonKM" />
+                <ScalarProperty Name="Vites" ColumnName="Vites" />
+                <ScalarProperty Name="Yakit" ColumnName="Yakit" />
+                <ScalarProperty Name="Yil" ColumnName="Yil" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="EklenmeTarihi" ColumnName="EklenmeTarihi" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -129,6 +129,10 @@
             // 
             this.ANNEM.FormattingEnabled = true;
             this.ANNEM.ItemHeight = 16;
+            this.ANNEM.Items.AddRange(new object[] {
+            "AHMET MEHMET FURKAN ",
+            "YİĞEN MEHMET",
+            "ALİ VELİ"});
             this.ANNEM.Location = new System.Drawing.Point(526, 48);
             this.ANNEM.Name = "ANNEM";
             this.ANNEM.Size = new System.Drawing.Size(262, 356);

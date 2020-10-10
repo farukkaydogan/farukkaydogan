@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "12.09.2020_Sablon": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Key": "Value"
+      }
+    }
+  }
+}
